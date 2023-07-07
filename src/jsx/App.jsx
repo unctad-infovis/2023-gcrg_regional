@@ -1,4 +1,4 @@
-import React, { /* useState, */useEffect } from 'react';
+import React, { /* useState, */useEffect, useMemo } from 'react';
 import '../styles/styles.less';
 
 // Load helpers.
@@ -11,25 +11,24 @@ function App() {
   // Data states.
   // const [data, setData] = useState(false);
 
+  const areas = useMemo(() => ['africa', 'arabRegion', 'asiaPacific', 'europe', 'latinAmericaAndCaribeean', 'ldcs', 'sids'], []);
   useEffect(() => {
-    // const data_file = (window.location.href.includes('unctad.org')) ? '/sites/default/files/data-file/2023-gcrg_regional.json' : './assets/data/data.json';
-    try {
-      // fetch(data_file)
-      //   .then((response) => {
-      //     if (!response.ok) {
-      //       throw Error(response.statusText);
-      //     }
-      //     return response.text();
-      //   })
-      //   .then(body => setData(JSON.parse(body)));
-    } catch (error) {
-      console.error(error);
+    if (window.location.hash) {
+      const hash = window.location.hash.slice(1);
+
+      if (areas.includes(hash)) {
+        document.querySelector(`#app-root-2023-gcrg_regional .${hash}_link`).classList.add('active');
+        document.querySelector(`#app-root-2023-gcrg_regional #${hash}`).classList.add('active');
+      }
     }
-  }, []);
+  }, [areas]);
 
   const changeRegion = (event) => {
     document.querySelector('#app-root-2023-gcrg_regional .container').style.backgroundImage = `url(./../assets/img/globe-${event.currentTarget.dataset.value}.jpg)`;
     document.querySelectorAll('#app-root-2023-gcrg_regional .region_link a').forEach(el => {
+      el.classList.remove('active');
+    });
+    document.querySelectorAll('#app-root-2023-gcrg_regional .region_container').forEach(el => {
       el.classList.remove('active');
     });
     event.currentTarget.classList.add('active');
@@ -41,16 +40,16 @@ function App() {
           <h2>Regional stories</h2>
           <h3 className="group_title">Regions</h3>
           <ul className="regions_group">
-            <li className="region_link"><a href="#africa" data-value="africa" onClick={(event) => changeRegion(event)}>Africa</a></li>
-            <li className="region_link"><a href="#arabRegion" data-value="arabRegion" onClick={(event) => changeRegion(event)}>Arab Region</a></li>
-            <li className="region_link"><a href="#asiaPacific" data-value="asiaPacific" onClick={(event) => changeRegion(event)}>Asia and the Pacific</a></li>
-            <li className="region_link"><a href="#europe" data-value="europe" onClick={(event) => changeRegion(event)}>Europe</a></li>
-            <li className="region_link"><a href="#latinAmericaAndCaribeean" data-value="latinAmericaAndCaribeean" onClick={(event) => changeRegion(event)}>Latin America and the Caribeean</a></li>
+            <li className="region_link"><a href="#africa" data-value="africa" className="africa_link" onClick={(event) => changeRegion(event)}>Africa</a></li>
+            <li className="region_link"><a href="#arabRegion" data-value="arabRegion" className="arabRegion_link" onClick={(event) => changeRegion(event)}>Arab Region</a></li>
+            <li className="region_link"><a href="#asiaPacific" data-value="asiaPacific" className="asiaPacific_link" onClick={(event) => changeRegion(event)}>Asia and the Pacific</a></li>
+            <li className="region_link"><a href="#europe" data-value="europe" className="europe_link" onClick={(event) => changeRegion(event)}>Europe</a></li>
+            <li className="region_link"><a href="#latinAmericaAndCaribeean" data-value="latinAmericaAndCaribeean" className="latinAmericaAndCaribeean_link" onClick={(event) => changeRegion(event)}>Latin America and the Caribeean</a></li>
           </ul>
           <h3 className="group_title">Special Groups</h3>
           <ul className="regions_group">
-            <li className="region_link"><a href="#ldcs" data-value="ldcs" onClick={(event) => changeRegion(event)}>Least Developed Countries</a></li>
-            <li className="region_link"><a href="#sids" data-value="sids" onClick={(event) => changeRegion(event)}>Small Islands Developing States</a></li>
+            <li className="region_link"><a href="#ldcs" data-value="ldcs" className="ldcs_link" onClick={(event) => changeRegion(event)}>Least Developed Countries</a></li>
+            <li className="region_link"><a href="#sids" data-value="sids" className="sids_link" onClick={(event) => changeRegion(event)}>Small Islands Developing States</a></li>
           </ul>
         </div>
       </div>
