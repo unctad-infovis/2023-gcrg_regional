@@ -8,71 +8,97 @@ html {
 
 #app-root-2023-gcrg_regional .app {
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  .container {
-    background-size: cover;
-    .navigation_container {
-      background: transparent linear-gradient(180deg, rgba(0, 99, 162, 0.95) 0%, rgba(0, 83, 146, 0.95) 100%) 0% 0% no-repeat padding-box;
-      display: inline-block;
-      padding: 40px 20px;
-      text-align: center;
-      flex-shrink: 1;
-      flex-grow: 0;
-      h2 {
-        color: #ffffff;
-        font-size: 42px;
-        margin: 0 0 20px 0;
-        font-family: Roboto Serif;
-      }
-      h3 {
-        color: #ffc700;
-        font-size: 26px;
-        font-family: Roboto;
-        margin: 20px 0 10px 0;
-        text-transform: uppercase;
-      }
-      .regions_group {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        .region_link {
-          a {
-            border-bottom: 1px dotted #fff;
-            color: #ffffff;
-            display: inline-block;
-            margin-bottom: 10px;
-            padding: 5px 0 0 0;
-            font-size: 16px;
-            text-decoration: none;
-            white-space: nowrap;
-            &:hover {
-              border-bottom: 2px solid #fff;
-              color: #fff;
-              cursor: pointer;
-              margin-bottom: 9px;
+  .navigation_background {
+    background-position: 50% 100%;
+    background-size: auto 100%;
+    .navigation_wrapper {
+      margin: auto auto;
+      max-width: 1200px;
+      .navigation_container {
+        background: transparent linear-gradient(180deg, rgba(0, 99, 162, 0.95) 0%, rgba(0, 83, 146, 0.95) 100%) 0% 0% no-repeat padding-box;
+        display: inline-block;
+        padding: 40px 20px;
+        text-align: center;
+        flex-shrink: 1;
+        flex-grow: 0;
+        h2 {
+          color: #ffffff;
+          font-family: Roboto Serif;
+          font-size: 42px;
+          margin: 0 0 20px 0;
+          &:after {
+            display: none;
+          }
+        }
+        h3 {
+          color: #ffc700;
+          font-size: 26px;
+          font-family: Roboto;
+          margin: 20px 0 10px 0;
+          text-transform: uppercase;
+        }
+        .regions_group {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          .region_link {
+            a {
+              border-bottom: 1px dotted #fff;
+              color: #ffffff;
+              display: inline-block;
+              font-size: 17px;
+              margin-bottom: 10px;
+              padding: 5px 0 0 0;
               text-decoration: none;
-            }
-            &.active {
-              font-weight: bold;
-              border-bottom: 2px solid #fff;
+              white-space: nowrap;
+              &:hover {
+                border-bottom: 2px solid #fff;
+                color: #fff;
+                cursor: pointer;
+                margin-bottom: 9px;
+                text-decoration: none;
+              }
+              &.active {
+                border-bottom: 2px solid #fff;
+                font-weight: bold;
+                margin-bottom: 9px;
+              }
             }
           }
         }
       }
     }
   }
+
   .content_container {
+    max-width: 800px;
+    margin: auto auto;
     .region_container[id] {
       background-color: rgba(255, 255, 255, 0.8);
       box-sizing: border-box;
-      display: none;
-      opacity: 0;
       padding: 20px;
       width: 100%;
       &.active,
       &:target {
-        display: block;
-        opacity: 1;
+        display: block !important;
+        opacity: 1 !important;
         transition: opacity 1s;
+      }
+      h2 {
+        color: @unbluetext;
+        font-family: Roboto Serif;
+        font-size: 42px;
+        margin: 0 0 20px 0;
+        text-align: center;
+        &:after {
+          display: none;
+        }
+      }
+      h3 {
+        color: @unbluetext;
+        font-size: 26px;
+        margin: 0 0 20px 0;
+        text-align: left;
       }
     }
   }
