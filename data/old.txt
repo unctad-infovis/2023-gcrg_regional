@@ -1,0 +1,100 @@
+<style type="text/css">.left-container {
+    background: transparent linear-gradient(180deg, #0063A2 0%, #005392 100%) 0% 0% no-repeat padding-box;
+    padding-top: 5rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 25%;
+    text-align: center;
+    padding-bottom: 40px
+  }
+
+  .Regions_group>a {
+    display: block;
+    color: #ffffff;
+    border-bottom: 1px dotted white;
+    padding-bottom: 15px;
+    padding-top: 15px
+  }
+
+  .Regions_group>a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff
+  }
+
+  .left-container div:first-child {
+    color: #ffffff;
+    font-size: 45px;
+    font: normal normal medium 45px/60px Roboto Serif 120pt;
+  }
+
+  .profiles div[id] {
+    display: none;
+  }
+
+  .profiles div[id]:target {
+    display: block;
+  }
+
+  .profiles {
+    padding-left: 20vw;
+    padding-right: 20vw
+  }
+
+  .profiles .title {
+    color: #009EDB;
+    font-size: 50px;
+    line-height: 60px;
+    font-family: 'Roboto Serif';
+    text-align: center
+  }
+
+  .profiles .intro {
+    color: #1FA8DF;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: 'Roboto'
+  }
+</style>
+<div style="max-width: 1200px; margin: auto;">
+<div class="left-container">
+<div>Regional stories</div>
+
+<div style="color:#ffc700;font: normal normal medium 15px/25px Roboto;text-transform: uppercase;padding-top:40px">Regions</div>
+
+<div class="Regions_group"><a href="#africa">Africa</a> <a href="#arabRegion">Arab Region</a> <a href="#asiaPacific">Asia and the Pacific</a> <a href="#europe">Europe</a> <a href="#latinAmericaAndCaribeean">Latin America and the Caribeean</a></div>
+
+<div style="color:#ffc700;font: normal normal medium 15px/25px Roboto;text-transform: uppercase;padding-top:40px">Special Groups</div>
+
+<div class="Regions_group"><a href="#ldcs">Least Developed Countries</a> <a href="#sids">Small Islands Developing States</a></div>
+</div>
+</div>
+
+<div class="profiles">
+<div id="africa">
+<div class="title">Africa</div>
+
+<div class="intro">Introduction</div>
+
+<p>Governments use public debt to finance their expenditure, to protect and invest in their people, and to pave their way to a better future. But when public debt grows too much or too fast, it can become a burden. This is what is happening today across the developing world. Public debt has reached colossal levels, largely due to countries’ efforts to fend off the impact of the COVID-19 pandemic, but also other challenges, such as the cost-of-living crisis, climate change or the pursuit of their development aspirations. The debt burden is heavier for developing countries facing rising inflation, interest rate hikes, currency devaluations and sluggish growth. This compromises their ability to fight climate change, react to sudden emergencies, or invest in their people and their future. The weight of the burden is already evident. Today, an increasing number of developing countries spend more on servicing their debt than on education, health, or infrastructure to service their people. A world of debt disrupts prosperity. There is a paradox embedded in our international financial architecture: developing economies, which need financing the most to propel their development, are those with less access to it. Developed countries can mobilize far larger amounts of resources and at a fraction of the cost. This must change. The United Nations has a roadmap of multilateral action to improve the international financial architecture. This can ease debt burdens and unleash the resources needed to foster sustainable development and accelerate our pace towards the achievement of the 2030 Agenda.</p>
+</div>
+
+<div id="arabRegion">
+<div class="title">Arab Region</div>
+
+<div class="intro">Introduction</div>
+
+<p>Governments use public debt to finance their expenditure, to protect and invest in their people, and to pave their way to a better future. But when public debt grows too much or too fast, it can become a burden. This is what is happening today across the developing world. Public debt has reached colossal levels, largely due to countries’ efforts to fend off the impact of the COVID-19 pandemic, but also other challenges, such as the cost-of-living crisis, climate change or the pursuit of their development aspirations. The debt burden is heavier for developing countries facing rising inflation, interest rate hikes, currency devaluations and sluggish growth. This compromises their ability to fight climate change, react to sudden emergencies, or invest in their people and their future. The weight of the burden is already evident. Today, an increasing number of developing countries spend more on servicing their debt than on education, health, or infrastructure to service their people. A world of debt disrupts prosperity. There is a paradox embedded in our international financial architecture: developing economies, which need financing the most to propel their development, are those with less access to it. Developed countries can mobilize far larger amounts of resources and at a fraction of the cost. This must change. The United Nations has a roadmap of multilateral action to improve the international financial architecture. This can ease debt burdens and unleash the resources needed to foster sustainable development and accelerate our pace towards the achievement of the 2030 Agenda.</p>
+</div>
+
+<div id="asiaPacific">asiaPacific</div>
+
+<div id="europe">europe</div>
+
+<div id="latinAmericaAndCaribeean">latinAmericaAndCaribeean</div>
+
+<div id="ldcs">Least Developed Countries</div>
+
+<div id="sids">Small Islands Developing States</div>
+</div>
